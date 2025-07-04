@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:near_now/routes/app_pages.dart';
 
-void main() => runApp(const MyApp());
+import 'config/app.dart';
+import 'config/config.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Template',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const Scaffold(body: Center(child: Text('Hello {{project_name}}!'))),
-    );
-  }
+void main() {
+  AppConfig.init(AppFlavor.dev); // 또는 .prod, .staging
+  runApp(const ProviderScope(child: MyApp()));
 }
