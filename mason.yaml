@@ -1,3 +1,4 @@
+version: 0.0.1
 name: flutter_complete_template
 description: A complete Flutter template including assets and pubspec.yaml
 vars:
