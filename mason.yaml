@@ -3,5 +3,5 @@ name: my_flutter_template
 description: A complete Flutter template including assets and pubspec.yaml
 vars:
   project_name:
-    type: my_flutter_template
+    type: string
     description: The name of your Flutter project
